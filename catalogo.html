@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de Maquinaria Agrícola — Portal del Norte</title>
+  <meta name="description" content="Catálogo completo de implementos y maquinaria agrícola 0 KM y usados. Tractores AgroChery, tolvas Gimetal, palas Sinomach, subsoladores Secman. Portal del Norte." />
+  <link rel="icon" type="image/png" href="assets/img/logo/logo.png" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="Portal del Norte - Inicio">
+        <img src="assets/img/logo/logo.png" alt="Portal del Norte" />
+      </a>
+      <nav class="header__nav" aria-label="Navegación principal">
+        <a href="index.html" class="nav__link" data-page="index.html">Inicio</a>
+        <a href="catalogo.html" class="nav__link" data-page="catalogo.html">Catálogo</a>
+        <a href="agrochery.html" class="nav__link nav__link--chery" data-page="agrochery.html">AgroChery</a>
+        <a href="financiacion.html" class="nav__link" data-page="financiacion.html">Financiación</a>
+        <a href="nosotros.html" class="nav__link" data-page="nosotros.html">Nosotros</a>
+        <a href="contacto.html" class="nav__link" data-page="contacto.html">Contacto</a>
+      </nav>
+      <div class="header__actions">
+        <a href="contacto.html" class="btn btn--primary btn--sm">Consultar maquinaria</a>
+      </div>
+      <button class="header__hamburger" id="hamburger" aria-label="Abrir menú">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html" class="nav__link">Inicio</a>
+    <a href="catalogo.html" class="nav__link">Catálogo</a>
+    <a href="agrochery.html" class="nav__link nav__link--chery">AgroChery</a>
+    <a href="financiacion.html" class="nav__link">Financiación</a>
+    <a href="nosotros.html" class="nav__link">Nosotros</a>
+    <a href="contacto.html" class="nav__link">Contacto</a>
+    <div class="mobile-nav__cta">
+      <a href="contacto.html" class="btn btn--primary btn--full">Consultar maquinaria</a>
+    </div>
+  </nav>
+
+  <!-- CATALOG HEADER -->
+  <div class="catalog-page">
+    <div class="catalog-page__header">
+      <div class="container">
+        <span class="section-label" style="color: rgba(255,255,255,0.5);">Portal del Norte</span>
+        <h1 class="section-title section-title--light" style="margin-top:.5rem;">Catálogo de Maquinaria</h1>
+        <p class="catalog-page__subtitle">Tractores, tolvas, palas y subsoladores — 0 KM y usados disponibles.</p>
+
+        <!-- TABS 0KM / USADO -->
+        <div class="condition-tabs" role="tablist" aria-label="Condición de la maquinaria">
+          <button class="condition-tab active" data-condition="all" role="tab" aria-selected="true">Todos</button>
+          <button class="condition-tab" data-condition="0km" role="tab" aria-selected="false">0 KM</button>
+          <button class="condition-tab" data-condition="usado" role="tab" aria-selected="false">Usados</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FILTROS -->
+    <div class="catalog-filters" id="catalog-filters">
+      <div class="container catalog-filters__inner">
+        
+        <!-- Filtro por Marca -->
+        <div class="filter-group">
+          <span class="filter-label">Marca:</span>
+          <div class="filter-chips" role="group" aria-label="Filtrar por marca">
+            <button class="filter-chip active" data-brand="all">Todas</button>
+            <button class="filter-chip" data-brand="agrochery">AgroChery</button>
+            <button class="filter-chip" data-brand="gimetal">Gimetal</button>
+            <button class="filter-chip" data-brand="sinomach">Sinomach</button>
+            <button class="filter-chip" data-brand="secman">Secman</button>
+          </div>
+        </div>
+
+        <div class="filter-divider" aria-hidden="true"></div>
+
+        <!-- Filtro por Categoría -->
+        <div class="filter-group">
+          <span class="filter-label">Categoría:</span>
+          <div class="filter-chips" role="group" aria-label="Filtrar por categoría">
+            <button class="filter-chip active" data-category="all">Todas</button>
+            <button class="filter-chip" data-category="tractores">Tractores</button>
+            <button class="filter-chip" data-category="tolvas">Tolvas</button>
+            <button class="filter-chip" data-category="palas">Palas</button>
+            <button class="filter-chip" data-category="subsoladores">Subsoladores</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATÁLOGO BODY -->
+    <div class="catalog-body">
+      <div class="container">
+        <p class="catalog-count" id="catalog-count" aria-live="polite"></p>
+
+        <div class="catalog-grid" id="catalog-grid">
+          <!-- Renderizado por catalog.js -->
+        </div>
+
+        <!-- EMPTY STATE -->
+        <div class="catalog-empty" id="catalog-empty" role="status" aria-live="polite">
+          <div class="catalog-empty__icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <h2 class="catalog-empty__title">Sin resultados</h2>
+          <p class="catalog-empty__desc">No encontramos maquinaria con los filtros seleccionados. Intentá con otras combinaciones.</p>
+          <button id="catalog-reset" class="btn btn--outline">Ver todo el catálogo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/img/logo/logo.png" alt="Portal del Norte" class="footer__logo" />
+          <p class="footer__desc">Implementos y maquinaria agrícola. Tractores, tolvas, palas y subsoladores con respaldo técnico.</p>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/portaldelnorte.agro/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Catálogo</p>
+          <ul class="footer__links">
+            <li><a href="catalogo.html?condition=0km" class="footer__link">Maquinaria 0 KM</a></li>
+            <li><a href="catalogo.html?condition=usado" class="footer__link">Maquinaria Usada</a></li>
+            <li><a href="catalogo.html?brand=agrochery" class="footer__link">Tractores AgroChery</a></li>
+            <li><a href="catalogo.html?brand=gimetal" class="footer__link">Tolvas Gimetal</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Páginas</p>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Inicio</a></li>
+            <li><a href="agrochery.html" class="footer__link">AgroChery</a></li>
+            <li><a href="financiacion.html" class="footer__link">Financiación</a></li>
+            <li><a href="nosotros.html" class="footer__link">Nosotros</a></li>
+            <li><a href="contacto.html" class="footer__link">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Contacto</p>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <a href="https://www.instagram.com/portaldelnorte.agro/" target="_blank" class="footer__link">@portaldelnorte.agro</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2025 Portal del Norte — Implementos Agrícolas.</p>
+        <a href="contacto.html" class="btn btn--primary btn--sm">Consultar maquinaria</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a href="#" class="whatsapp-float" id="whatsapp-float" aria-label="Consultar por WhatsApp" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/catalog.js"></script>
+  <script>
+    document.getElementById('whatsapp-float').href = getWhatsAppUrl();
+  </script>
+</body>
+</html>

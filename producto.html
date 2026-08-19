@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalle de Producto — Portal del Norte</title>
+  <meta name="description" content="Detalle de maquinaria agrícola — Portal del Norte." />
+  <link rel="icon" type="image/png" href="assets/img/logo/logo.png" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="assets/img/logo/logo.png" alt="Portal del Norte" />
+      </a>
+      <nav class="header__nav">
+        <a href="index.html" class="nav__link" data-page="index.html">Inicio</a>
+        <a href="catalogo.html" class="nav__link" data-page="catalogo.html">Catálogo</a>
+        <a href="agrochery.html" class="nav__link nav__link--chery" data-page="agrochery.html">AgroChery</a>
+        <a href="financiacion.html" class="nav__link" data-page="financiacion.html">Financiación</a>
+        <a href="nosotros.html" class="nav__link" data-page="nosotros.html">Nosotros</a>
+        <a href="contacto.html" class="nav__link" data-page="contacto.html">Contacto</a>
+      </nav>
+      <div class="header__actions">
+        <a href="catalogo.html" class="btn btn--primary btn--sm">Ver catálogo</a>
+      </div>
+      <button class="header__hamburger" id="hamburger" aria-label="Abrir menú">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html" class="nav__link">Inicio</a>
+    <a href="catalogo.html" class="nav__link">Catálogo</a>
+    <a href="agrochery.html" class="nav__link nav__link--chery">AgroChery</a>
+    <a href="financiacion.html" class="nav__link">Financiación</a>
+    <a href="nosotros.html" class="nav__link">Nosotros</a>
+    <a href="contacto.html" class="nav__link">Contacto</a>
+    <div class="mobile-nav__cta">
+      <a href="catalogo.html" class="btn btn--primary btn--full">Ver catálogo</a>
+    </div>
+  </nav>
+
+  <!-- PRODUCT DETAIL -->
+  <main class="product-detail" id="product-detail-page">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Navegación de ruta" id="breadcrumb">
+        <a href="index.html" class="breadcrumb__item">Inicio</a>
+        <span class="breadcrumb__sep" aria-hidden="true">›</span>
+        <a href="catalogo.html" class="breadcrumb__item">Catálogo</a>
+        <span class="breadcrumb__sep" aria-hidden="true">›</span>
+        <span class="breadcrumb__item active" id="breadcrumb-name">Producto</span>
+      </nav>
+
+      <!-- Not Found -->
+      <div id="product-not-found" class="catalog-empty" style="display:none;">
+        <div class="catalog-empty__icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h1 class="catalog-empty__title">Producto no encontrado</h1>
+        <p class="catalog-empty__desc">El producto que buscás no existe o fue retirado del catálogo.</p>
+        <a href="catalogo.html" class="btn btn--outline">Ver todo el catálogo</a>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-detail__grid" id="product-detail-content" style="display:none;">
+        <!-- GALLERY -->
+        <div class="product-gallery">
+          <div class="product-gallery__main">
+            <img src="" alt="" id="product-main-image" />
+          </div>
+        </div>
+
+        <!-- INFO -->
+        <div class="product-info">
+          <div class="product-info__brand-row">
+            <img src="" alt="" class="product-info__brand-logo" id="product-brand-logo" />
+            <span class="product-info__brand-name" id="product-brand-name"></span>
+            <span class="product-card__badge product-card__badge--0km" id="product-condition-badge"></span>
+          </div>
+
+          <div>
+            <h1 class="product-info__name" id="product-name"></h1>
+            <p class="product-info__category" id="product-category"></p>
+          </div>
+
+          <div id="product-description" style="font-size:.95rem; color: var(--color-text-secondary); line-height:1.75;"></div>
+
+          <!-- SPECS -->
+          <div>
+            <h2 class="h4" style="margin-bottom:.75rem; font-size:1rem; text-transform:uppercase; letter-spacing:.05em;">Especificaciones</h2>
+            <div class="product-specs-table" id="product-specs"></div>
+          </div>
+
+          <!-- APPLICATIONS -->
+          <div id="applications-wrap">
+            <h2 class="h4" style="margin-bottom:.75rem; font-size:1rem; text-transform:uppercase; letter-spacing:.05em;">Aplicaciones</h2>
+            <div class="product-applications" id="product-applications"></div>
+          </div>
+
+          <!-- PRICE -->
+          <div id="product-price-wrap" style="padding: 1.25rem; background: var(--color-background); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+            <p style="font-size:.75rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color: var(--color-text-secondary); margin-bottom:.5rem;">Precio</p>
+            <p id="product-price" style="font-size:1.25rem; font-weight:700; color:var(--color-text);">Consultar precio</p>
+          </div>
+
+          <!-- CTAs -->
+          <div style="display:flex; gap:1rem; flex-direction:column;">
+            <a href="#" id="product-wa-btn" target="_blank" rel="noopener" class="btn btn--whatsapp btn--lg btn--full">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Quiero este equipo
+            </a>
+            <a href="contacto.html" id="product-form-btn" class="btn btn--outline btn--lg btn--full">
+              Enviar consulta por formulario
+            </a>
+          </div>
+
+          <!-- FINANCING NOTE -->
+          <div style="padding:1rem; background:var(--color-primary-muted); border-radius:var(--radius-md); display:flex; gap:.75rem; align-items:flex-start;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <p style="font-size:.82rem; color:var(--color-primary); line-height:1.6;">
+              <strong>Financiación disponible.</strong> Recibimos tu maquinaria usada en parte de pago. 
+              <a href="financiacion.html" style="text-decoration:underline;">Ver opciones</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Products -->
+      <div id="related-wrap" style="padding-bottom: 5rem; display:none;">
+        <div class="section-head" style="margin-bottom:2rem; margin-top:1rem;">
+          <span class="section-label">También podría interesarte</span>
+          <h2 class="section-title" style="font-size:1.8rem;">Otros equipos</h2>
+        </div>
+        <div class="products__grid" id="related-grid"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="mobile-cta-bar" id="mobile-cta-bar">
+    <a href="#" id="mobile-wa-btn" target="_blank" rel="noopener" class="btn btn--whatsapp btn--full">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Consultar por WhatsApp
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/img/logo/logo.png" alt="Portal del Norte" class="footer__logo" />
+          <p class="footer__desc">Implementos y maquinaria agrícola con respaldo técnico.</p>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/portaldelnorte.agro/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Catálogo</p>
+          <ul class="footer__links">
+            <li><a href="catalogo.html?condition=0km" class="footer__link">0 KM</a></li>
+            <li><a href="catalogo.html?condition=usado" class="footer__link">Usados</a></li>
+            <li><a href="catalogo.html?brand=agrochery" class="footer__link">AgroChery</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Páginas</p>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Inicio</a></li>
+            <li><a href="agrochery.html" class="footer__link">AgroChery</a></li>
+            <li><a href="financiacion.html" class="footer__link">Financiación</a></li>
+            <li><a href="contacto.html" class="footer__link">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Contacto</p>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <a href="https://www.instagram.com/portaldelnorte.agro/" target="_blank" class="footer__link">@portaldelnorte.agro</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2025 Portal del Norte — Implementos Agrícolas.</p>
+        <a href="catalogo.html" class="btn btn--primary btn--sm">Ver catálogo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+      const product = id ? getProductById(id) : null;
+
+      const notFound = document.getElementById('product-not-found');
+      const content = document.getElementById('product-detail-content');
+      const relatedWrap = document.getElementById('related-wrap');
+
+      if (!product) {
+        notFound.style.display = 'flex';
+        document.title = 'Producto no encontrado — Portal del Norte';
+        return;
+      }
+
+      // Update document title
+      document.title = (product.metaTitle || `${product.displayName} | Portal del Norte`);
+      document.querySelector('meta[name="description"]').content = 
+        product.metaDescription || `${product.displayName} disponible en Portal del Norte.`;
+
+      // Breadcrumb
+      document.getElementById('breadcrumb-name').textContent = product.displayName;
+
+      // Show content
+      content.style.display = 'grid';
+
+      // Image
+      const mainImg = document.getElementById('product-main-image');
+      mainImg.src = product.image;
+      mainImg.alt = `${product.displayName} - Portal del Norte`;
+
+      // Brand
+      const brandLogo = document.getElementById('product-brand-logo');
+      brandLogo.src = product.brandLogo;
+      brandLogo.alt = product.brand;
+
+      document.getElementById('product-brand-name').textContent = product.brand;
+
+      const badge = document.getElementById('product-condition-badge');
+      badge.textContent = product.condition === '0km' ? '0 KM' : 'Usado';
+      badge.className = `product-card__badge product-card__badge--${product.condition === '0km' ? '0km' : 'usado'}`;
+
+      // Name & category
+      document.getElementById('product-name').textContent = `${product.brand} ${product.model}`;
+      document.getElementById('product-category').textContent = `${product.category}${product.power ? ' · ' + product.power : ''}`;
+
+      // Description
+      document.getElementById('product-description').textContent = product.description;
+
+      // Specs
+      const specsEl = document.getElementById('product-specs');
+      if (product.specifications) {
+        specsEl.innerHTML = Object.entries(product.specifications)
+          .map(([key, val]) => `
+            <div class="spec-row">
+              <div class="spec-row__key">${key}</div>
+              <div class="spec-row__val">${val}</div>
+            </div>
+          `).join('');
+      }
+
+      // Applications
+      const appsEl = document.getElementById('product-applications');
+      if (product.applications && product.applications.length) {
+        appsEl.innerHTML = product.applications.map(a => `<span class="app-tag">✓ ${a}</span>`).join('');
+      } else {
+        document.getElementById('applications-wrap').style.display = 'none';
+      }
+
+      // Price
+      const priceEl = document.getElementById('product-price');
+      priceEl.textContent = product.price 
+        ? `$${product.price.toLocaleString('es-AR')}` 
+        : 'Consultar precio';
+
+      // WhatsApp CTAs
+      const waUrl = getWhatsAppUrl(product.whatsappMessage);
+      document.getElementById('product-wa-btn').href = waUrl;
+      document.getElementById('mobile-wa-btn').href = waUrl;
+
+      // Contact form link with pre-filled params
+      const formLink = `contacto.html?brand=${encodeURIComponent(product.brand)}&model=${encodeURIComponent(product.model)}&condition=${product.condition}`;
+      document.getElementById('product-form-btn').href = formLink;
+
+      // Track product view
+      trackEvent('view_product', { product_id: product.id, brand: product.brandSlug });
+
+      // Related products
+      const related = CATALOG.filter(p => p.id !== product.id).slice(0, 3);
+      if (related.length > 0) {
+        relatedWrap.style.display = 'block';
+        document.getElementById('related-grid').innerHTML = related.map(p => renderProductCard(p)).join('');
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Video (demasiado pesado para GitHub — agregar manualmente o usar hosting externo)
+BANNER.mp4
+
+# Assets originales (ya copiados a /assets)
+LOGO.jpeg
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini

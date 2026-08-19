@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroChery Tractores — Portal del Norte</title>
+  <meta name="description" content="Tractores AgroChery disponibles en Portal del Norte. Modelos 0 KM con tracción 4WD, cabina integral y potencia para todo trabajo agrícola. Consultá hoy." />
+  <meta name="keywords" content="tractores AgroChery, AgroChery RK704, tractores agrícolas 0km, tractores Argentina, Portal del Norte" />
+  <link rel="icon" type="image/png" href="assets/img/logo/logo.png" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="Portal del Norte - Inicio">
+        <img src="assets/img/logo/logo.png" alt="Portal del Norte" />
+      </a>
+      <nav class="header__nav" aria-label="Navegación principal">
+        <a href="index.html" class="nav__link" data-page="index.html">Inicio</a>
+        <a href="catalogo.html" class="nav__link" data-page="catalogo.html">Catálogo</a>
+        <a href="agrochery.html" class="nav__link nav__link--chery active" data-page="agrochery.html">AgroChery</a>
+        <a href="financiacion.html" class="nav__link" data-page="financiacion.html">Financiación</a>
+        <a href="nosotros.html" class="nav__link" data-page="nosotros.html">Nosotros</a>
+        <a href="contacto.html" class="nav__link" data-page="contacto.html">Contacto</a>
+      </nav>
+      <div class="header__actions">
+        <a href="catalogo.html?brand=agrochery" class="btn btn--primary btn--sm" onclick="trackEvent('click_chery_header_cta', {})">Ver tractores</a>
+      </div>
+      <button class="header__hamburger" id="hamburger" aria-label="Abrir menú">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html" class="nav__link">Inicio</a>
+    <a href="catalogo.html" class="nav__link">Catálogo</a>
+    <a href="agrochery.html" class="nav__link nav__link--chery">AgroChery</a>
+    <a href="financiacion.html" class="nav__link">Financiación</a>
+    <a href="nosotros.html" class="nav__link">Nosotros</a>
+    <a href="contacto.html" class="nav__link">Contacto</a>
+    <div class="mobile-nav__cta">
+      <a href="catalogo.html?brand=agrochery" class="btn btn--primary btn--full">Ver tractores AgroChery</a>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO AGROCHERY
+       ============================================================ -->
+  <section class="agrochery-page">
+    <div class="agrochery-hero">
+      <div class="agrochery-hero__bg">
+        <img src="assets/img/banner/banner-chery.jpg" alt="Tractor AgroChery en trabajo de campo" />
+      </div>
+      <div class="agrochery-hero__overlay"></div>
+
+      <div class="container">
+        <div class="agrochery-hero__content fade-in">
+          <img
+            src="assets/img/marcas/agrochery.jpeg"
+            alt="AgroChery Tractores"
+            style="width:160px; margin-bottom:2rem;"
+          />
+          <div class="chery-section__label">Tractores Agrícolas · Portal del Norte</div>
+          <h1 class="chery-section__title">
+            Potencia real<br/>
+            para el<br/>
+            <span>trabajo del campo.</span>
+          </h1>
+          <p class="chery-section__desc">
+            AgroChery fabrica tractores agrícolas diseñados para responder en condiciones reales de trabajo. Tecnología, robustez y rendimiento en una sola máquina.
+          </p>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+            <a href="catalogo.html?brand=agrochery" class="btn btn--primary btn--lg" onclick="trackEvent('click_chery_hero_catalog', {})">
+              Ver tractores disponibles
+            </a>
+            <a href="#chery-contact" class="btn btn--secondary btn--lg">
+              Consultar ahora
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         MODELOS DISPONIBLES
+         ============================================================ -->
+    <div class="agrochery-models section">
+      <div class="container">
+        <div class="section-head section-head--center fade-in">
+          <span class="section-label" style="color:var(--color-accent);">Disponibilidad actual</span>
+          <h2 class="section-title section-title--light">Tractores en stock</h2>
+          <p class="section-subtitle" style="color:rgba(255,255,255,0.6); margin-left:auto; margin-right:auto;">
+            Tractores AgroChery 0 KM disponibles en Portal del Norte. Consultá por disponibilidad y financiación.
+          </p>
+        </div>
+
+        <div class="products__grid" id="chery-products-grid" style="margin-top:3rem;">
+          <!-- Renderizado por JS -->
+        </div>
+
+        <div style="text-align:center; margin-top:2.5rem;" class="fade-in">
+          <a href="catalogo.html?brand=agrochery" class="btn btn--primary btn--lg" onclick="trackEvent('click_chery_all', {})">
+            Ver catálogo AgroChery completo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         POR QUÉ AGROCHERY
+         ============================================================ -->
+    <div class="section" style="background-color: var(--color-primary-deeper); color: var(--color-white);">
+      <div class="container">
+        <div class="section-head section-head--center fade-in">
+          <span class="section-label" style="color:var(--color-chery);">Características</span>
+          <h2 class="section-title section-title--light">¿Por qué AgroChery?</h2>
+        </div>
+
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:1.5rem; margin-top:3rem;">
+
+          <div class="value__item fade-in" style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.08);">
+            <div class="value__icon" style="background:rgba(184,204,26,0.15);">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--color-chery)" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div class="value__title" style="color:var(--color-white);">Potencia comprobada</div>
+            <p class="value__desc" style="color:rgba(255,255,255,0.6);">Motores de alta eficiencia pensados para el trabajo continuo en campo.</p>
+          </div>
+
+          <div class="value__item fade-in fade-in-delay-1" style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.08);">
+            <div class="value__icon" style="background:rgba(184,204,26,0.15);">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--color-chery)" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div class="value__title" style="color:var(--color-white);">Tracción 4WD</div>
+            <p class="value__desc" style="color:rgba(255,255,255,0.6);">Sistema de doble tracción para mayor agarre y rendimiento en todo tipo de suelo.</p>
+          </div>
+
+          <div class="value__item fade-in fade-in-delay-2" style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.08);">
+            <div class="value__icon" style="background:rgba(184,204,26,0.15);">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--color-chery)" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="value__title" style="color:var(--color-white);">Cabina integral</div>
+            <p class="value__desc" style="color:rgba(255,255,255,0.6);">Cabina ROPS con climatización y visibilidad amplia para trabajo de largas jornadas.</p>
+          </div>
+
+          <div class="value__item fade-in fade-in-delay-3" style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.08);">
+            <div class="value__icon" style="background:rgba(184,204,26,0.15);">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--color-chery)" stroke-width="1.8"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div class="value__title" style="color:var(--color-white);">0 KM disponibles</div>
+            <p class="value__desc" style="color:rgba(255,255,255,0.6);">Unidades nuevas con garantía. Consultá disponibilidad y condiciones en Portal del Norte.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         APLICACIONES
+         ============================================================ -->
+    <div class="section" style="background-color: var(--color-surface-mid); color:var(--color-white);">
+      <div class="container">
+        <div class="section-head fade-in">
+          <span class="section-label" style="color:var(--color-accent);">Versatilidad</span>
+          <h2 class="section-title section-title--light">Para todo trabajo del campo</h2>
+          <p class="section-subtitle" style="color:rgba(255,255,255,0.6);">
+            Los tractores AgroChery se adaptan a una amplia variedad de tareas agrícolas.
+          </p>
+        </div>
+
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:1rem; margin-top:3rem;" class="fade-in fade-in-delay-1">
+          <div style="padding:1.5rem; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius-lg); display:flex; align-items:center; gap:.75rem;">
+            <span style="font-size:1.5rem;">🌾</span>
+            <span style="font-size:.9rem; color:rgba(255,255,255,0.8); font-weight:500;">Labranza primaria</span>
+          </div>
+          <div style="padding:1.5rem; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius-lg); display:flex; align-items:center; gap:.75rem;">
+            <span style="font-size:1.5rem;">🌱</span>
+            <span style="font-size:.9rem; color:rgba(255,255,255,0.8); font-weight:500;">Siembra y cultivo</span>
+          </div>
+          <div style="padding:1.5rem; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius-lg); display:flex; align-items:center; gap:.75rem;">
+            <span style="font-size:1.5rem;">💧</span>
+            <span style="font-size:.9rem; color:rgba(255,255,255,0.8); font-weight:500;">Pulverización</span>
+          </div>
+          <div style="padding:1.5rem; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius-lg); display:flex; align-items:center; gap:.75rem;">
+            <span style="font-size:1.5rem;">🚜</span>
+            <span style="font-size:.9rem; color:rgba(255,255,255,0.8); font-weight:500;">Transporte rural</span>
+          </div>
+          <div style="padding:1.5rem; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius-lg); display:flex; align-items:center; gap:.75rem;">
+            <span style="font-size:1.5rem;">⚙️</span>
+            <span style="font-size:.9rem; color:rgba(255,255,255,0.8); font-weight:500;">Implementos varios</span>
+          </div>
+          <div style="padding:1.5rem; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius-lg); display:flex; align-items:center; gap:.75rem;">
+            <span style="font-size:1.5rem;">🌿</span>
+            <span style="font-size:.9rem; color:rgba(255,255,255,0.8); font-weight:500;">Uso general agropecuario</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         CTA FINAL + FORMULARIO
+         ============================================================ -->
+    <div class="agrochery-cta-section" id="chery-contact">
+      <div class="container" style="max-width:700px;">
+        <div class="fade-in" style="margin-bottom:3rem;">
+          <span class="section-label" style="color:var(--color-chery);">¿Te interesa un tractor AgroChery?</span>
+          <h2 class="section-title section-title--light" style="margin-top:.5rem;">
+            Consultá disponibilidad<br/>y financiación
+          </h2>
+          <p style="font-size:1rem; color:rgba(255,255,255,0.65); margin-top:1rem; line-height:1.7;">
+            Nuestros asesores te orientan según tus necesidades reales de trabajo. Sin compromisos.
+          </p>
+        </div>
+
+        <div class="fade-in fade-in-delay-1" style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a href="#" id="chery-wa-btn" target="_blank" rel="noopener" class="btn btn--whatsapp btn--lg" onclick="trackEvent('click_chery_wa', {})">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Consultar por WhatsApp
+          </a>
+          <a href="contacto.html?brand=AgroChery" class="btn btn--outline btn--lg" style="border-color:rgba(255,255,255,0.35); color:var(--color-white);" onclick="trackEvent('click_chery_form', {})">
+            Enviar formulario
+          </a>
+          <a href="catalogo.html?brand=agrochery" class="btn btn--ghost btn--lg" style="color:rgba(255,255,255,0.65);" onclick="trackEvent('click_chery_catalog2', {})">
+            Ver catálogo →
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section><!-- /agrochery-page -->
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/img/logo/logo.png" alt="Portal del Norte" class="footer__logo" />
+          <p class="footer__desc">Implementos y maquinaria agrícola. Tractores, tolvas, palas y subsoladores.</p>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/portaldelnorte.agro/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Catálogo</p>
+          <ul class="footer__links">
+            <li><a href="catalogo.html?brand=agrochery" class="footer__link">Tractores AgroChery</a></li>
+            <li><a href="catalogo.html?condition=0km" class="footer__link">Maquinaria 0 KM</a></li>
+            <li><a href="catalogo.html?condition=usado" class="footer__link">Maquinaria Usada</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Páginas</p>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Inicio</a></li>
+            <li><a href="catalogo.html" class="footer__link">Catálogo</a></li>
+            <li><a href="financiacion.html" class="footer__link">Financiación</a></li>
+            <li><a href="contacto.html" class="footer__link">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Contacto</p>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <a href="https://www.instagram.com/portaldelnorte.agro/" target="_blank" class="footer__link">@portaldelnorte.agro</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2025 Portal del Norte — Implementos Agrícolas.</p>
+        <a href="catalogo.html?brand=agrochery" class="btn btn--primary btn--sm">Ver tractores AgroChery</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="whatsapp-float" id="whatsapp-float" aria-label="Consultar por WhatsApp" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Render AgroChery products
+    const cheryGrid = document.getElementById('chery-products-grid');
+    if (cheryGrid) {
+      const cheryProducts = filterProducts({ brand: 'agrochery' });
+      cheryGrid.innerHTML = cheryProducts.length
+        ? cheryProducts.map(p => renderProductCard(p)).join('')
+        : '<p style="color:rgba(255,255,255,0.5); text-align:center; grid-column:1/-1;">Consultá disponibilidad de tractores AgroChery directamente.</p>';
+    }
+
+    const waMsg = 'Hola, visité la web de Portal del Norte y quiero consultar por los tractores AgroChery.';
+    document.getElementById('chery-wa-btn').href = getWhatsAppUrl(waMsg);
+    document.getElementById('whatsapp-float').href = getWhatsAppUrl(waMsg);
+  </script>
+</body>
+</html>
