@@ -388,9 +388,16 @@ h4, .h4 { font-family: var(--font-body); font-weight: 600; font-size: var(--text
 }
 
 .header__logo img {
-  height: 42px;
+  height: 68px;
   width: auto;
+  max-width: 220px;
+  object-fit: contain;
   filter: brightness(0) invert(1);
+  transition: opacity 0.2s ease;
+}
+
+.header__logo img:hover {
+  opacity: 0.85;
 }
 
 .header__nav {
@@ -498,6 +505,11 @@ h4, .h4 { font-family: var(--font-body); font-weight: 600; font-size: var(--text
   align-items: center;
   overflow: hidden;
   background-color: var(--color-primary-deeper);
+  /* Fallback estático cuando el video MP4 no está disponible */
+  background-image: url('../img/banner/banner.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero__video-wrap {
