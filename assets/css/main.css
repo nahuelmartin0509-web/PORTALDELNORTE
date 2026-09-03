@@ -504,6 +504,7 @@ h4, .h4 { font-family: var(--font-body); font-weight: 600; font-size: var(--text
   position: absolute;
   inset: 0;
   z-index: 0;
+  background-color: var(--color-primary-deeper);
 }
 
 .hero__video {

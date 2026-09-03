@@ -81,16 +81,16 @@
     <div class="hero__video-wrap">
       <video
         class="hero__video"
+        id="hero-video"
         autoplay
         muted
         loop
         playsinline
-        preload="auto"
-        poster="assets/img/banner/banner.webp"
+        preload="metadata"
         aria-hidden="true"
+        style="opacity:0; transition: opacity 0.6s ease;"
       >
         <source src="BANNER.mp4" type="video/mp4" />
-        <img src="assets/img/banner/banner.webp" alt="Maquinaria agrícola Portal del Norte" class="hero__fallback" />
       </video>
     </div>
 
@@ -525,6 +525,19 @@
 
     // Init lead form
     initLeadForm('lead-form');
+
+    // Hero video — fade in only when ready to play (no poster flash)
+    const heroVideo = document.getElementById('hero-video');
+    if (heroVideo) {
+      const showVideo = () => { heroVideo.style.opacity = '1'; };
+      heroVideo.addEventListener('canplay', showVideo, { once: true });
+      // Fallback: if video doesn't load in 3s, still show it (or the dark bg stays clean)
+      setTimeout(() => {
+        if (heroVideo.style.opacity === '0') {
+          heroVideo.style.opacity = '1';
+        }
+      }, 3000);
+    }
   </script>
 </body>
 </html>
