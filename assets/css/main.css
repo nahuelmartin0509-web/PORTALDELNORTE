@@ -1485,6 +1485,40 @@ h4, .h4 { font-family: var(--font-body); font-weight: 600; font-size: var(--text
 }
 
 /* ============================================================
+   CRÉDITO DESARROLLADOR
+   ============================================================ */
+.dev-credit {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin-top: var(--space-6);
+  padding: var(--space-4) var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  font-size: .72rem;
+  color: rgba(255,255,255,0.28);
+  letter-spacing: .04em;
+}
+
+.dev-credit strong {
+  color: rgba(255,255,255,0.55);
+  font-weight: 600;
+  letter-spacing: .03em;
+}
+
+.dev-credit__ig {
+  color: rgba(255,255,255,0.35);
+  display: flex;
+  align-items: center;
+  transition: color var(--transition-fast);
+  text-decoration: none;
+}
+
+.dev-credit__ig:hover {
+  color: #E1306C;
+}
+
+/* ============================================================
    CATÁLOGO — PÁGINA INDEPENDIENTE
    ============================================================ */
 .catalog-page {
