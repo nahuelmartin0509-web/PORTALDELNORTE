@@ -104,7 +104,7 @@
   --transition-slow: 0.4s ease;
 
   /* Header height */
-  --header-height: 72px;
+  --header-height: 140px;
 
   /* Container */
   --container-max: 1280px;
@@ -388,7 +388,7 @@ h4, .h4 { font-family: var(--font-body); font-weight: 600; font-size: var(--text
 }
 
 .header__logo img {
-  height: 62px;
+  height: 124px;
   width: auto;
   filter: brightness(0) invert(1);
 }
@@ -2430,7 +2430,11 @@ h4, .h4 { font-family: var(--font-body); font-weight: 600; font-size: var(--text
    ============================================================ */
 @media (max-width: 768px) {
   :root {
-    --header-height: 64px;
+    --header-height: 100px;
+  }
+
+  .header__logo img {
+    height: 88px;
   }
 
   .section {
