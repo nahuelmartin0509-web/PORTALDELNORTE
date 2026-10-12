@@ -157,20 +157,6 @@ const CATALOG = [
     whatsappMessage: 'Hola, quiero consultar por el Tractor Chery Usado 25HP + Desmalezadora.',
   },
 
-  {
-    id: 'hanomag-r55',
-    brand: 'Hanomag', brandSlug: 'otras', brandLogo: '',
-    model: 'Hanomag R55', displayName: 'Tractor Hanomag R55',
-    category: 'Tractores Usados', categorySlug: 'tractores-usados', condition: 'usado', power: '55 HP',
-    image: 'assets/img/catalogo/HONOMAG R55.jpeg',
-    gallery: ['assets/img/catalogo/HONOMAG R55.jpeg'],
-    description: 'Tractor Hanomag R55 usado. Motor diesel 4 cilindros con inyección directa. Toma de fuerza y enganche.',
-    specifications: { 'Potencia': '55 HP', 'Tracción': '4x2', 'Motor': 'Diesel 4 cil. inyección directa', 'Toma de Fuerza': 'Sí', 'Enganche': 'Sí', 'Estado': 'Usado' },
-    applications: ['Labranza', 'Transporte rural', 'Implementos varios'],
-    featured: false, price: null, priceUnit: null, priceLabel: null,
-    financing: true, financingNote: 'Consultar financiación',
-    whatsappMessage: 'Hola, quiero consultar por el Tractor Hanomag R55 Usado.',
-  },
 
   {
     id: 'hanomag-r60',
@@ -187,35 +173,7 @@ const CATALOG = [
     whatsappMessage: 'Hola, quiero consultar por el Tractor Hanomag R60.',
   },
 
-  {
-    id: 'fiat-500',
-    brand: 'Fiat', brandSlug: 'otras', brandLogo: '',
-    model: 'Fiat 500', displayName: 'Tractor Fiat 500',
-    category: 'Tractores Usados', categorySlug: 'tractores-usados', condition: 'usado', power: '50 HP',
-    image: 'assets/img/catalogo/FIAT 500.jpeg',
-    gallery: ['assets/img/catalogo/FIAT 500.jpeg'],
-    description: 'Tractor Fiat 500 usado. Motor diesel 3 cilindros, toma de fuerza y enganche 3 puntos.',
-    specifications: { 'Potencia': '50 HP', 'Tracción': '4x2', 'Motor': 'Diesel 3 cilindros', 'Toma de Fuerza': 'Sí', 'Enganche': '3 puntos', 'Estado': 'Usado' },
-    applications: ['Labranza', 'Transporte rural', 'Implementos varios'],
-    featured: false, price: null, priceUnit: null, priceLabel: null,
-    financing: true, financingNote: 'Consultar financiación',
-    whatsappMessage: 'Hola, quiero consultar por el Tractor Fiat 500 Usado.',
-  },
 
-  {
-    id: 'fiat-780',
-    brand: 'Fiat', brandSlug: 'otras', brandLogo: '',
-    model: 'Fiat 780', displayName: 'Tractor Fiat 780',
-    category: 'Tractores Usados', categorySlug: 'tractores-usados', condition: 'usado', power: null,
-    image: 'assets/img/catalogo/FIAT 780.jpeg',
-    gallery: ['assets/img/catalogo/FIAT 780.jpeg'],
-    description: 'Tractor Fiat 780 usado. Consultanos para conocer disponibilidad y valor.',
-    specifications: { 'Estado': 'Usado' },
-    applications: ['Labranza', 'Implementos varios'],
-    featured: false, price: null, priceUnit: null, priceLabel: null,
-    financing: true, financingNote: 'Consultar precio y financiación',
-    whatsappMessage: 'Hola, quiero consultar por el Tractor Fiat 780 Usado.',
-  },
 
   {
     id: 'massey-ferguson-165',
@@ -418,20 +376,6 @@ const CATALOG = [
     whatsappMessage: 'Hola, quiero consultar por el Mixer Vertical Juárez Usado (con balanza).',
   },
 
-  {
-    id: 'mixer-montecor-vertical',
-    brand: 'Montecor', brandSlug: 'otras', brandLogo: '',
-    model: 'Mixer Vertical Montecor', displayName: 'Mixer Vertical Montecor',
-    category: 'Implementos Agrícolas', categorySlug: 'implementos', condition: '0km', power: null,
-    image: 'assets/img/catalogo/MIXER VERTICAL MONTECOR.jpeg',
-    gallery: ['assets/img/catalogo/MIXER VERTICAL MONTECOR.jpeg'],
-    description: 'Mixer Vertical Montecor. Consultanos para conocer especificaciones y disponibilidad.',
-    specifications: { 'Tipo': 'Vertical' },
-    applications: ['Ganadería', 'Mezcla de raciones'],
-    featured: false, price: null, priceUnit: null, priceLabel: null,
-    financing: true, financingNote: 'Consultar financiación',
-    whatsappMessage: 'Hola, quiero consultar por el Mixer Vertical Montecor.',
-  },
 
   {
     id: 'gimetal-edr-1500',
@@ -478,20 +422,6 @@ const CATALOG = [
     whatsappMessage: 'Hola, quiero consultar por el Descompactador de Suelos Secman M3600.',
   },
 
-  {
-    id: 'quebradora-richiger',
-    brand: 'Richiger', brandSlug: 'otras', brandLogo: '',
-    model: 'Quebradora de Granos Richiger', displayName: 'Quebradora de Granos Richiger',
-    category: 'Implementos Agrícolas', categorySlug: 'implementos', condition: '0km', power: null,
-    image: 'assets/img/catalogo/QUEBRADORA DE GRANOS RICHIGER.jpeg',
-    gallery: ['assets/img/catalogo/QUEBRADORA DE GRANOS RICHIGER.jpeg'],
-    description: 'Quebradora de granos Richiger. Consultanos para conocer especificaciones y disponibilidad.',
-    specifications: { 'Marca': 'Richiger' },
-    applications: ['Procesado de granos', 'Ganadería', 'Producción lechera'],
-    featured: false, price: null, priceUnit: null, priceLabel: null,
-    financing: true, financingNote: 'Consultar precio y financiación',
-    whatsappMessage: 'Hola, quiero consultar por la Quebradora de Granos Richiger.',
-  },
 
   {
     id: 'richiger-r6e-plus',
